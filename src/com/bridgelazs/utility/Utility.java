@@ -537,16 +537,99 @@ public static void PermIteration(String str)
 		}
 	
 
-	}   
+	   
  
 
+  //**InsertionSort**//
 
 
+public static String[] InsertionSort(String[] array)
+{
+	String key;
+	int i,j;
+	for(i=1;i<array.length;i++)
+	{
+		key=array[i];
+		j=i-1;
+		while(j>=0&&array[j].compareTo(key)>0)
+		{
+			array[j+1]=array[j];
+			j=j-1;
+		
+		}
+		array[j+1]=key;
+	
+	 } return array;
+	 
+}
 
+public static void PrintArray(String[] array)
 
+{
+  for(int i=0;i<array.length;i++)
+  {
+	  System.out.println(array[i]);
+  }
+  System.out.println();
+}
 
+public static int[] BubbleSort(int[] array)
+{
+	int i,j,temp=0;
+	for(i=0;i<array.length;i++)
+	{
+		for(j=0;j<(array.length-1-i);j++)
+		{
+			if(array[j]>array[j+1])
+			{
+		      temp=array[j];
+		      array[j]=array[j+1];
+		      array[j+1]=temp;
+			}
+	
+		}
 
+	}
+	return array;
+	
+}
 
+public static void PrintArray(int[] array)
+
+{
+  for(int i=0;i<array.length;i++)
+  {
+	  System.out.println(array[i]);
+  }
+  System.out.println();
  
 
+}
+    
 
+
+     //**MagicNumber**//
+
+public static int FindMagicNo(int low,int high)
+{    
+	String userresponce;
+	Scanner s=new Scanner(System.in);
+	
+	int mid=low+high/2;
+	
+	if((high-low)==1)
+		return low;
+	
+	System.out.println("is it your number less than "+mid);
+	userresponce=s.next();
+	
+	if(userresponce.equals("true")||userresponce.equals("TRUE"))
+	return FindMagicNo(low,mid);
+	
+	else
+		return FindMagicNo(mid,high);
+		
+	
+	
+}
+}
