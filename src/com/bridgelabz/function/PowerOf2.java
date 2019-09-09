@@ -6,10 +6,14 @@ public class PowerOf2
 {
 public static void main(String[] args)
 {   
-	int number=Integer.parseInt(args[0]);
-System.out.println("2's table");
-	Utility.powerOf2(number);
-			
+	int N=Integer.parseInt(args[0]);
+	
+		System.out.println("enter the valid rangeof N");
+		Utility.CheckCon(N);
+		
+		System.out.println("2's table");
+        Utility.PowerOf2(N);
 	
 }
 }
+                                           

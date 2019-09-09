@@ -7,10 +7,8 @@ public class HarmonicNumber
 	public static double Hn;
 public static void main(String[] args) 
 { 
-	int number=Integer.parseInt(args[0]);
-	
-	
-	Utility.nthHarmonic(number);
-	//System.out.println("the nth harmonic number is "+Hn );
+	double number=Double.parseDouble(args[0]);
+	 double result=Utility.nthHarmonic(number);
+	System.out.println("the nth harmonic is "+result);
 }
 }

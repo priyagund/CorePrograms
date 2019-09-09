@@ -6,15 +6,10 @@ import com.bridgelazs.utility.Utility;
 
 public class FlipCoin 
 {
-	
-	 
  public static int noOftime_Tosscoin;
 
 public static void main(String[] args)
  {
-	
-	
-	
 	do{
 		System.out.println("number of time flip the coin");
 		noOftime_Tosscoin = Utility.getInt();
@@ -28,26 +23,7 @@ public static void main(String[] args)
 	 
 	 System.out.println("total percentage of head" +(100-perTail));
 	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
+	  
 }
 
-private static int totalobs() {
-	// TODO Auto-generated method stub
-	return 0;
-}
 }

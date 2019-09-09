@@ -142,31 +142,51 @@ public class Utility {
 
 	// power of 2
 
-	public static void powerOf2(int number) {
-
-		for (int i = 0; i < number; i++) {
+	public static boolean CheckCon(int N) {
+         
+	     if(N>0 && N<31)
+		{
+			return true;
+		}
+		return false;
+	}
+		public static void PowerOf2(int N)
+		{  
+			if(CheckCon(N)) {
+		  for (int i = 0; i < N; i++) {
 			System.out.println("the power of 2 is 2^" + i + ":" + (int) (Math.pow(2, i)));
 		}
+		
+	    }
+			else {
+				System.out.println("invalid range");
+			}
+			
+		}
 
-	}
+	
 
 	// **code for Harmonic series **//
 
-	public static void nthHarmonic(int number) {
+	public static double nthHarmonic(double number) {
 		double Hn = 0;
-		System.out.println("harmonic series");
-		for (int i = 1; i < number; i++) {
-			Hn = Hn + (1.0 / i);
-			if (i < number)
-				System.out.println("(1/" + i + ")+");
-
-			else
-				System.out.println("(1/" + i + ")=");
-
-		}
-		System.out.println("the  nth harmonic number is " + Hn);
-
+	     //double i=1;
+			if(number>0)
+			{   System.out.println("harmonic series");
+				for(double i=1;i<number;i++)
+					System.out.print("(1/" + i + ")+");
+				
+			
+				for (double i = number; i > 1; i--) {
+					double c=1.0/i;
+					Hn = Hn +c;
+				}
+			}
+				else
+					System.out.println("invalid number");
+			return Hn;
 	}
+  
 
 	// ** code forDayofWeek**//
 
@@ -628,8 +648,58 @@ public static int FindMagicNo(int low,int high)
 	
 	else
 		return FindMagicNo(mid,high);
-		
-	
 	
 }
+
+  /**Leap Year For Condition*/
+  
+ public static void CheckCondition(int year) 
+ {      int count=0;
+		 while (year>0)
+		 {
+			 count++;
+			year= year/10;
+		} 
+		if(count!=4) 
+		{
+		  System.out.println("year is invalid");
+		}	 
+ }
+       public static boolean isleap(int year) 
+       {
+    	   if((year%100!=0 && year%4==0)||(year%400==0))
+    	   {
+    		   return true;
+    	   }
+    	   return false;
+    	   
+       }
+ 
+       
+       /** Triplets**/
+       
+       public static void TripletSum(int array[],int length) 
+       {
+    	   int i,j,k;
+    	    int count=0;
+    	   for(i=0;i<length-2;i++) 
+    	   {
+    		  for(j=i+1;j<length-1;j++)
+    		  {
+    			  for(k=j+1;k<length;k++) 
+    			  {
+    				  if(array[i]+array[j]+array[k]==0) 
+    				  {
+    					  System.out.println(" triplets are"+array[i]+" "+array[j]+" "+array[k]);
+    					  count++;
+    				  }
+    				 
+    			  }
+    		  }
+    	   }
+    	   System.out.println("no of triplets are"+count);
+    	   
+       }
+       
+       
 }

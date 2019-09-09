@@ -13,7 +13,7 @@ public class LinkListFileRead
 	
 	public static void main(String[] args) throws IOException
 	{    
-		LinkedList<String> list=new LinkedList<String>();
+	  LinkedList<String> list=new LinkedList<String>();
 		String[] array=new String[4];
 		 String str=" ";
 		 
@@ -27,12 +27,14 @@ public class LinkListFileRead
         	  {
         		  array=str.split(" ");
         	  }
-               for(int i=0;i<array.length;i++)
+               for(int i=0;i<array.length;i++) {
                System.out.print(array[i]+" ");
-               System.out.println();
-        	  System.out.println(array[1]);
+               
+            //   list.addElement(array[i]);
+               }
           }
-   
+        
+       
    
 }
 
