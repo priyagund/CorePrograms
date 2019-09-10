@@ -17,7 +17,9 @@ public class Utility {
 	public static int chance;
 	public static int bet;
 	private static int win, cash;
-
+    private static long start;
+    private static long stop;
+    public static int count=0;
 	// public static int Tosscoin;
 
 	public static int getInt() {
@@ -31,6 +33,15 @@ public class Utility {
 		return str;
 	}
 
+	public static double getDouble() {
+		double number = scanner.nextDouble();
+		return number ;
+	}
+	
+	public static boolean getBoolean() {
+		boolean number = scanner.nextBoolean();
+		return number ;
+	}
 	// **code for IntOpt operation**//
 
 	public static void operation1(int a, int b, int c) {
@@ -443,11 +454,10 @@ public static int BinCon(int number)
 
  
  
-public static int permutation(String str,int firstId,int lastId)
+public static int Permutation(String str,int firstId,int lastId)
 {
-    int count=0;
+    
     if(firstId==lastId){
-	 
 	 count++;
 	 System.out.println(str);
 }
@@ -456,8 +466,8 @@ public static int permutation(String str,int firstId,int lastId)
 	 for(int i=firstId;i<lastId;i++)
 	 {
 		 str=swap(str,firstId,i);
-		 permutation(str,firstId+1,lastId);
-		 str=swap(str,firstId+1,i); 
+		 Permutation(str,firstId+1,lastId);
+		 str=swap(str,firstId,i); 
 	}
 	 
  }
@@ -582,7 +592,39 @@ public static String[] InsertionSort(String[] array)
 	 } return array;
 	 
 }
+   /*Insertion sort for number*/
+   public static int[] InsertionSort(int[] array) 
+   {
+	  
+	   int i,j;
+	   for(i=0;i<array.length;i++)
+	   { 
+		   int p=array[i];
+	       j=i-1;
+	       
+	       while(j>0 && array[j]>p )
+	       {
+	    	   array[j+1]=array[j];
+	    	   j=j-1;
+	       }
+	       array[j+1]=p;
+	       
+	   }
+	   return array;
+	   
+   }	  
+	  
+   public static void PrintArray2(int[] array)
+   {
+	int i,j;;
+	for(i=0;i<array.length;i++) 
+	{
+		System.out.println(array[i]);
+	}
+	  System.out.println();
+   }
 
+  
 public static void PrintArray(String[] array)
 
 {
@@ -701,5 +743,183 @@ public static int FindMagicNo(int low,int high)
     	   
        }
        
+       /** StopWatch**/
        
+       public static void StartStopWatch() 
+       {
+    	   start=System.currentTimeMillis(); 
+       }
+       
+       public static void EndStopWatch()
+       {
+    	   stop=System.currentTimeMillis();
+       }
+       
+       public static double ElapsedTime() {
+         double elapsedTime= (stop-start*0.001);
+    	  
+         System.out.println("elapsed time in second=" + elapsedTime);
+    	   return elapsedTime;
+       }
+       
+       /* TwoD array*/
+       
+       public static void IntegerArray(int row ,int col) 
+       {
+    	   Scanner sc=new Scanner(System.in);
+    	   System.out.println("enter" +(row*col)+ "for integer array");
+    	   int[][] arr =new int[row][col];
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    arr[i][j] =getInt(); 
+    		   } 
+    	   }
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    System.out.print(arr[i][j]+" ");
+    		   } 
+    		   System.out.println();
+    	   }
+           
+       }
+       public static void DoubleArray(int row ,int col) 
+       {
+    	   Scanner sc=new Scanner(System.in);
+    	   System.out.println("enter" +(row*col)+ "for double array");
+    	   double[][] arr =new double[row][col];
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    arr[i][j] =getDouble();
+    			   
+    		   } 
+    	   }
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    System.out.print(arr[i][j]+" ");
+    		   } 
+    		   System.out.println();
+    	   }
+           
+       }
+         
+       public static void BooleanArray(int row ,int col) 
+       {
+    	   Scanner sc=new Scanner(System.in);
+    	   System.out.println("enter" +(row*col)+ "for boolean array");
+    	   boolean[][] arr =new boolean[row][col];
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    arr[i][j] =getBoolean();
+    			   
+    		   } 
+    		  
+    	   }
+    	   for(int i=0;i<row;i++)
+    	   {
+    		   for(int j=0;j<col;j++) 
+    		   {
+    			    System.out.print(arr[i][j]+" ");
+    		   } 
+    		   System.out.println();
+    	   }
+           
+       }
+       
+       /* prime number between range*/
+       
+     public static int[] IsPrimeNumber(int array[])
+     {
+    	 int i,j,count=0,f=0;
+ 		
+ 		int [] arr=new int[200];
+ 		
+ 	  for(i=2;i<1000;i++) 
+ 	   {
+ 		  count=0;
+ 		  for(j=2;j<i/2;j++)
+ 		  {
+ 			   if(i%j==0) {
+ 				   count=1;
+ 			   }
+ 		  }
+ 		  if(count==0) 
+ 		  {
+ 			 array[f]=i;
+ 			 f++;
+ 		}
+ 	  }
+ 	  for(j=0;array[j]!=0;j++)
+ 	  System.out.print(" " + array[j]);
+ 	 
+ 	 return array;
+  }
+     
+  
+     public static void IsAnagram(int i,int j) 
+     {
+    	int temp=i;
+    	int temp1=j;
+    	int x = 0,y=0;
+    	
+    	while(temp>0)
+    	{
+    		 temp=temp/10;
+    		 x++;
+    	} 
+    	int[] a=new int[x];	
+    	while(temp>0) 
+    	{
+    		temp1=temp1/10;
+    		y++;
+    		
+    	}
+    	int[] b=new int[y];
+    	
+    	if(a.length!=b.length) 
+    	System.out.println("number is not anagram");
+    	
+    	else {
+            for(int k=0;k<a.length;k++) 
+            {
+            	a[k]=temp%10;
+            	temp=temp/10;
+            }
+            for(int l=0;l<a.length;l++) 
+            {
+            	a[l]=temp%10;
+            	temp=temp/10;
+            }
+            x=0;
+    		for(int k=0;k<a.length;k++) 
+    		{ 
+    			for(int l=0;l<b.length;l++)
+    			{
+    				if(a[k]==a[l])
+    				{
+    					x=1;
+    					break;
+    					
+    				}
+    				if(x==0) 
+    			     System.out.println("number is anagram");
+    			}
+    			
+    		}
+    		
+    		
+    	}	
+    		
+    	
+    	
+     }
 }

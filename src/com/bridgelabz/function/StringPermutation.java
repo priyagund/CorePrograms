@@ -10,10 +10,12 @@ public class StringPermutation
 	System.out.println("enter string");
 	
 	String str=Utility.getStr();
-	lastId=str.length()-1;
-	System.out.println("enter possible permutation");
+	lastId=(str.length()-1);
 	
-	count=Utility.permutation(str,firstId,lastId);
+	
+	count=Utility.Permutation(str,firstId,lastId);
+	
+	System.out.println("enter possible permutation");
 	
 	System.out.println("no of possible permutation is ="+count);
 	
