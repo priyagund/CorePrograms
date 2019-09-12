@@ -1,4 +1,4 @@
-package com.bridgelabz.datastructure;
+package com.bridgelabz.algorithm;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

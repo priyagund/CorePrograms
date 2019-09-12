@@ -11,7 +11,7 @@ public class DayOfWeek
 	int year=Integer.parseInt(args[2]);
 	
 	Utility.FindOutDay(day, month, year);
-	System.out.println("the day of week is"+day);
+//System.out.println("the day of week is"+day);
 }
  
 }
