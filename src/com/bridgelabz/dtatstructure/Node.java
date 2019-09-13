@@ -2,7 +2,7 @@ package com.bridgelabz.dtatstructure;
 
 public class Node<T>
 {
-  T data1;
+  T data;
   Node<T> next;
 
 

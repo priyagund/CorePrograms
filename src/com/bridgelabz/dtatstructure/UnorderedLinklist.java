@@ -24,8 +24,10 @@ public class UnorderedLinklist<T> {
 
 		System.out.println("enter word u want to search");
 		String str1 = Utility.getStr();
-		list.search(str1);
-		list.ShowList();
-
+	     list.search(str1);
+		 list.ShowList();
+		
+	     list.ShowList();
+        
 	}
 }

@@ -877,6 +877,7 @@ public class Utility {
 		return a;
 	}
 
+	
 	public static int[] IsPalindrome(int[] isPrime) {
 		int[] pal = new int[1000];
 		int count = 0;
@@ -906,4 +907,9 @@ public class Utility {
 			return false;
 
 	}
+	
+	    
+		
+		
+	
 }
