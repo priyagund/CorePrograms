@@ -1,3 +1,12 @@
+
+/******************************************************************************
+*  Purpose: class for linklist perform all operation on linklist 
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.dtatstructure;
 
 public class LinkedList<T> {
@@ -58,7 +67,7 @@ public class LinkedList<T> {
 		if (isEmpty()) {
 			System.out.println("list is empty");
 		} else {
-			int index=-1;
+			int index = -1;
 			Node<T> ptr = head;
 			while (ptr != null) {
 				index++;
@@ -67,7 +76,6 @@ public class LinkedList<T> {
 					// return true;
 					isFoundKey = true;
 					break;
-					
 
 				}
 				ptr = ptr.next;
@@ -76,12 +84,11 @@ public class LinkedList<T> {
 //				isFoundKey = true;
 //				index++;
 //			}
-				
-			
-			if(isFoundKey) {
+
+			if (isFoundKey) {
 				delete(index);
 				System.out.println("Deleting..");
-			}else {
+			} else {
 				insertAtLast(key);
 				System.out.println("Inserting..");
 			}
@@ -155,28 +162,37 @@ public class LinkedList<T> {
 		System.out.println();
 	}
 
-	public <T extends Comparable<T>>void sortList() 
-	{
-		Node<T>node=new Node();
-		node=(Node<T>) head;
-	    Node<T>n= (Node <T>) head;
-	    
-	    Node<T>n1=n.next;
-	    T temp;
-      for(int i=0;i<6-1;i++) 
-      {
-    	  for(int j=0;j<=(6-1)-1-i;j++) 
-    	  {
-    		  if((n.data.compareTo(n1.data)>0)) 
-    		  {
-    			  temp=n.data;
-    			  n.data=n1.data;
-    			  n1.data=temp;
-    		  }
-    		  n1=n1.next;
-    	  }	
-    	  n=n.next;
-    	  n1=n.next;
-      }
-	}	
-}	
+	public <T extends Comparable<T>> void sortList() {
+		Node<T> node = new Node();
+		node = (Node<T>) head;
+		Node<T> n = (Node<T>) head;
+
+		Node<T> n1 = n.next;
+		T temp;
+		for (int i = 0; i < 6 - 1; i++) {
+			for (int j = 0; j <= (6 - 1) - 1 - i; j++) {
+				if ((n.data.compareTo(n1.data) > 0)) {
+					temp = n.data;
+					n.data = n1.data;
+					n1.data = temp;
+				}
+				n1 = n1.next;
+			}
+			n = n.next;
+			n1 = n.next;
+		}
+	}
+
+	public T get(int index) {
+		if (index == 0)
+			return head.data;
+		else {
+			Node<T> n = head;
+			for (int i = 0; i < index - 1; i++) {
+				n = n.next;
+			}
+			return n.data;
+		}
+
+	}
+}

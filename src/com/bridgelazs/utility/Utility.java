@@ -1,4 +1,15 @@
-package com.bridgelazs.utility;
+
+
+/******************************************************************************
+*  Purpose: This is utility file which contains logic for files.
+*   this file is having methods who can take input process it and
+*   returns the output.
+*
+*  @author  priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/package com.bridgelazs.utility;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

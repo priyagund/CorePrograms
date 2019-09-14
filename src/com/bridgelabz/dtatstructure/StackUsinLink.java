@@ -1,35 +1,44 @@
-package com.bridgelabz.dtatstructure;
 
-import com.bridgelazs.utility.Utility;
+/******************************************************************************
+*  Purpose: stack using Linklist class to for checking all operation operation 
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/package com.bridgelabz.dtatstructure;
 
-public class StackUsinLink<T>
-{ 
+public class StackUsinLink<T> {
+	LinkedList<T> list = new LinkedList<T>();
+	int top = 0;
 
-	public Node<T> head;
-	Node<T> node=new Node();
-	T top=null;
-	public void push(T data)
-    {
-		Node<T> temp=new Node<T>();
-		if(temp==null)
-		{
-			System.out.println("Heap overflow");
-		}
-		temp.data=data;
-		temp.next=top;
-		top=temp;
+	public void push(T data) {
+		list.addElement(data);
+		top++;
 	}
-	 public boolean isEmpty() 
-	 {
-		return top=null;
-		 
-	 }
-	 public int peek() 
-	 {
-		 if(!isEmpty()) {
-			 return top.data;
-			 
-		 }
-			 
-	 }
+
+	public T pop() {
+		
+		if (!list.isEmpty()) {
+			T data = list.get(top);
+			list.delete(--top);
+			return data;
+		} else {
+			System.out.println("Nothing to pop");
+			return null;
+		}
+			
+		
+	}
+
+	public boolean isEmpty() {
+		return list.isEmpty();
+	}
+
+	public T peek() {
+		T data = list.get(top);
+		return data;
+	}
+	
+	
 }
