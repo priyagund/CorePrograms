@@ -233,7 +233,7 @@ public class Utility {
 		else if (day == 6)
 			System.out.println("day is saturday ");
 
-	}
+	} 
 	// **carLoan**//
 
 	public static double MonthlyPayment(double Y, double P, double R) {
@@ -920,7 +920,14 @@ public class Utility {
 	}
 	
 	    
-		
-		
+	public static int dayOfWeek(int day,int month, int year)	
+	{
+		int x,year0,month0,day0;
+		year0 = year - (14 - month) / 12;
+		x = year0 + (year0 / 4) - (year0 / 100) + (year0 / 400);
+		month0 = month + 12 * ((14 - month) / 12) - 2;
+		 day0 = (day + x + 31 * month0 / 12) % 7;
+		return day0;
+	 }
 	
 }

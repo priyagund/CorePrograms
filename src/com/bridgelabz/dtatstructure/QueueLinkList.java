@@ -26,6 +26,7 @@ public class QueueLinkList<T>
 	  
   }
   
+  
   public T deQueue()
   {
 	if (!list.isEmpty()) {
@@ -38,6 +39,18 @@ public class QueueLinkList<T>
 	return null;
   }
    
+    public T rearpeek() 
+    {
+    	T data=list.get(front);
+    	return data;
+    }
+    
+    public T frontpeek() 
+    {
+    	T data=list.get(rear);
+    	return data;
+    }
+    
   
   public void showQueue() 
 	{
