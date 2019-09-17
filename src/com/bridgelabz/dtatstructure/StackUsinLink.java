@@ -40,5 +40,28 @@ public class StackUsinLink<T> {
 		return data;
 	}
 	
+	public int size()
+    {
+		int x=0;
+		Node<T> node=list.head;
+		while(node.next!=null)
+		{
+			
+			x++;
+			node=node.next;
+		}
+		return x;
+	}
+	
+	public void stackshow() 
+	{
+		Node<T> node=list.head;
+		while(node!=null)
+		{   
+			System.out.print(node.data+" ");
+			node=node.next;
+		}
+	}
+	
 	
 }

@@ -28,8 +28,9 @@ public class CashCounter {
 		}
 		queue.showQueue();
 		System.out.println("number of person in queue");
-		queue.showQueue();
+		
 		while (size > 0) {
+			queue.showQueue();
 			System.out.println("available balance in bank");
 			System.out.println("enter 1.for  deposit money\n 2.for withdraw money");
 
@@ -50,6 +51,7 @@ public class CashCounter {
 					money = money - withdrawmoney;
 					System.out.println("your bank balance is" + money);
 					queue.deQueue();
+				
 				} else {
 					System.out.println("no money available in bank");
 					if(size!=1)

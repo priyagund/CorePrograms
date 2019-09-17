@@ -1,5 +1,4 @@
 
-
 /******************************************************************************
 *  Purpose: This is utility file which contains logic for files.
 *   this file is having methods who can take input process it and
@@ -9,7 +8,8 @@
 *  @version 1.0
 *  @since   12-09-2019
 *
-******************************************************************************/package com.bridgelazs.utility;
+******************************************************************************/
+package com.bridgelazs.utility;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -233,7 +233,7 @@ public class Utility {
 		else if (day == 6)
 			System.out.println("day is saturday ");
 
-	} 
+	}
 	// **carLoan**//
 
 	public static double MonthlyPayment(double Y, double P, double R) {
@@ -786,7 +786,7 @@ public class Utility {
 					count1++;
 					break;
 				}
-				
+
 			}
 		}
 
@@ -795,7 +795,7 @@ public class Utility {
 	}
 
 	public static boolean isAnagramCheck(int num1, int num2) {
-		if (num1 < 10 || num2 < 10) {
+		if (num1 < 10 || num2 < 10 || num1==num2) {
 			return false;
 		} else {
 
@@ -888,7 +888,6 @@ public class Utility {
 		return a;
 	}
 
-	
 	public static int[] IsPalindrome(int[] isPrime) {
 		int[] pal = new int[1000];
 		int count = 0;
@@ -904,11 +903,10 @@ public class Utility {
 
 	private static boolean IsPalindrome(int i) {
 		int r, sum = 0, temp;
-		
 
 		temp = i;
 		while (i > 0) {
-			r = i % 10; 
+			r = i % 10;
 			sum = (sum * 10) + r;
 			i = i / 10;
 		}
@@ -918,16 +916,22 @@ public class Utility {
 			return false;
 
 	}
-	
-	    
-	public static int dayOfWeek(int day,int month, int year)	
-	{
-		int x,year0,month0,day0;
+
+	public static int dayOfWeek(int day, int month, int year) {
+		int x, year0, month0, day0;
 		year0 = year - (14 - month) / 12;
 		x = year0 + (year0 / 4) - (year0 / 100) + (year0 / 400);
 		month0 = month + 12 * ((14 - month) / 12) - 2;
-		 day0 = (day + x + 31 * month0 / 12) % 7;
+		day0 = (day + x + 31 * month0 / 12) % 7;
 		return day0;
-	 }
-	
+	}
+
+	public static long factorial(long n) {
+		long fact=1;
+		for (long i = 1; i <= n; i++) {
+			fact=fact*i;
+		}
+		return fact;
+	}
+
 }

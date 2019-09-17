@@ -1,5 +1,5 @@
 /******************************************************************************
-*  Purpose: Queue using Linklist class to enque and deque the operation 
+*  Purpose: Queue using Linklist class to enque and deque the operation
 *
 *  @author  Priyanka gund
 *  @version 1.0
@@ -8,11 +8,15 @@
 ******************************************************************************/
 package com.bridgelabz.dtatstructure;
 
+
 public class QueueLinkList<T>
 {
   LinkedList<T> list=new LinkedList<T>();
-  int rear;
-  int front;
+  int rear=0;
+  int front=0;
+  
+  
+  // insert data in queue
   
   public void enQueue(T data) 
   {
@@ -20,12 +24,15 @@ public class QueueLinkList<T>
 	  rear++;
   }
   
+  // checking queue position
+  
   public boolean isEmpty()
   {
 	   return list.isEmpty();
 	  
   }
   
+  //deleting the data from queue
   
   public T deQueue()
   {
@@ -39,6 +46,7 @@ public class QueueLinkList<T>
 	return null;
   }
    
+  // peek the rear elelment
     public T rearpeek() 
     {
     	T data=list.get(front);
@@ -51,10 +59,28 @@ public class QueueLinkList<T>
     	return data;
     }
     
+    // deleting data from first position
+     public T deQueueFromStart() 
+     {
+    	 if (!list.isEmpty()) {
+ 			T data = list.get(front);
+ 			list.delete(front);
+    	     return data;
+    	     
+    	 }
+    	 else
+         {
+    		System.out.println("nothing to dequeue in queue"); 
+    	 }
+    	 return null;
+     }
   
-  public void showQueue() 
-	{
-		list.ShowList();
-	}
+
+     
+     // show queue data
+	     public void showQueue() 
+		{
+			list.ShowList();
+		}
   
 }
