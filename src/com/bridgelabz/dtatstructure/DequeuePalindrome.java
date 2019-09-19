@@ -1,5 +1,6 @@
 /******************************************************************************
-*  Purpose:  check string is palindrome or not using linklist
+* 
+ Purpose:  check string is palindrome or not using linklist
 *
 *  @author  Priyanka gund
 *  @version 1.0
@@ -26,6 +27,7 @@ public class DequeuePalindrome
 			list.addElement(s.charAt(i));
 		}
 		
+		// cheking string from backside
 		
 		Node<Character> last=list.head;
 		
@@ -42,6 +44,7 @@ public class DequeuePalindrome
 			n--;
 			j=0;
 		}
+		// checking string from front side
 		Node<Character> first=list.head;
 		for (int i = 0; i < s.length(); i++) {
 			front=front+first.data;

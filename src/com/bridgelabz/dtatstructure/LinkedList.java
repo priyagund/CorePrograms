@@ -12,13 +12,16 @@ package com.bridgelabz.dtatstructure;
 public class LinkedList<T> {
 	public Node<T> head;
 
+	// inserting data at first
 	public void insertAtFirst(T data) {
-		Node<T> node = new Node();
+		Node<T> node = new Node<T>();
 		node.data = data;
-		node.next = null;
+		node.next = head;
+		head = node;
 
 	}
 
+	// inserting element at last positon
 	public void insertAtLast(T data) {
 		Node<T> node = new Node();
 		Node temp;
@@ -36,6 +39,7 @@ public class LinkedList<T> {
 
 	}
 
+	// add element in list
 	public void addElement(T data) {
 		Node<T> node = new Node<T>();
 		node.data = data;
@@ -62,6 +66,8 @@ public class LinkedList<T> {
 		return false;
 	}
 
+	// search the element in list
+
 	public void search(T key) {
 		boolean isFoundKey = false;
 		if (isEmpty()) {
@@ -80,10 +86,6 @@ public class LinkedList<T> {
 				}
 				ptr = ptr.next;
 			}
-//			if ((ptr.data).equals(key)) {
-//				isFoundKey = true;
-//				index++;
-//			}
 
 			if (isFoundKey) {
 				delete(index);
@@ -97,6 +99,7 @@ public class LinkedList<T> {
 
 	}
 
+	// deleting element in list
 	public void delete(int index) {
 		if (isEmpty()) {
 			System.out.println("list is empty");
@@ -117,6 +120,7 @@ public class LinkedList<T> {
 		}
 	}
 
+	// inserting element in given position
 	public void InsertAtposition(int index, T foundword) {
 		if (isEmpty())
 			System.out.println("list is empty");
@@ -135,6 +139,7 @@ public class LinkedList<T> {
 
 	}
 
+	// finding index of data
 	public int indexOfData(T FindIndex) {
 		int count = 0;
 		if (isEmpty()) {
@@ -152,16 +157,23 @@ public class LinkedList<T> {
 
 	}
 
-	public void ShowList() {
+	// show all linklist element
+	public String ShowList() {
+		String str = "";
 		Node<T> node = head;
 		while (node.next != null) {
 			System.out.print(node.data + " ");
+			str +=node.data + " ";
 			node = node.next;
 		}
 		System.out.print(node.data);
 		System.out.println();
+		str += node.data;
+		str += "\n";
+		return str;
 	}
 
+	// extend comparable class for compare two integer
 	public <T extends Comparable<T>> void sortList() {
 		Node<T> node = new Node();
 		node = (Node<T>) head;
@@ -183,6 +195,7 @@ public class LinkedList<T> {
 		}
 	}
 
+	// method for accessing data of given position
 	public T get(int index) {
 		if (index == 0)
 			return head.data;

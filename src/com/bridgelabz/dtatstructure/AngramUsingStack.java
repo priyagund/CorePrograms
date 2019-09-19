@@ -1,4 +1,12 @@
-package com.bridgelabz.dtatstructure;
+
+/******************************************************************************
+* 
+ Purpose:  Prime Angram number Using stack
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/package com.bridgelabz.dtatstructure;
 
 import com.bridgelazs.utility.Utility;
 

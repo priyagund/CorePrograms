@@ -1,6 +1,7 @@
 
 /******************************************************************************
 *  Purpose:Create a Program which creates Banking Cash Counter where people
+
            come in to deposit Cash and withdraw Cash.
 *
 *  @author  Priyanka gund
@@ -8,11 +9,15 @@
 *  @since   12-09-2019
 *
 ******************************************************************************/
+
 package com.bridgelabz.dtatstructure;
 
 import com.bridgelazs.utility.Utility;
 
 public class CashCounter {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		QueueLinkList<Integer> queue = new QueueLinkList<Integer>();
 		System.out.println("enter money available in bank");
@@ -28,6 +33,7 @@ public class CashCounter {
 		}
 		queue.showQueue();
 		System.out.println("number of person in queue");
+		
 		
 		while (size > 0) {
 			queue.showQueue();

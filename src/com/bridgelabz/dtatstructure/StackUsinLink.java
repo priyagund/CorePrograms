@@ -12,11 +12,13 @@ public class StackUsinLink<T> {
 	LinkedList<T> list = new LinkedList<T>();
 	int top = 0;
 
+	// push element in stack
 	public void push(T data) {
 		list.addElement(data);
 		top++;
 	}
 
+	//deleting element from stack
 	public T pop() {
 		
 		if (!list.isEmpty()) {
@@ -31,6 +33,7 @@ public class StackUsinLink<T> {
 		
 	}
 
+	// checking stack status
 	public boolean isEmpty() {
 		return list.isEmpty();
 	}
@@ -40,6 +43,7 @@ public class StackUsinLink<T> {
 		return data;
 	}
 	
+	//finding size of stack
 	public int size()
     {
 		int x=0;
@@ -53,6 +57,7 @@ public class StackUsinLink<T> {
 		return x;
 	}
 	
+	// show the element 
 	public void stackshow() 
 	{
 		Node<T> node=list.head;

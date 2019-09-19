@@ -1,4 +1,13 @@
-package com.bridgelabz.dtatstructure;
+
+/******************************************************************************
+* 
+ Purpose:  Binary Search tree using
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/package com.bridgelabz.dtatstructure;
 
 class BinarySearchTree { 
 	  

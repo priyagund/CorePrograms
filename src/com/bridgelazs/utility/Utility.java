@@ -653,9 +653,9 @@ public class Utility {
 	public static void TripletSum(int array[], int length) {
 		int i, j, k;
 		int count = 0;
-		for (i = 0; i < length - 2; i++) {
+		for (i = 0; i < length; i++) {
 			for (j = i + 1; j < length - 1; j++) {
-				for (k = j + 1; k < length; k++) {
+				for (k = j + 1; k < length-2; k++) {
 					if (array[i] + array[j] + array[k] == 0) {
 						System.out.println(" triplets are" + array[i] + " " + array[j] + " " + array[k]);
 						count++;

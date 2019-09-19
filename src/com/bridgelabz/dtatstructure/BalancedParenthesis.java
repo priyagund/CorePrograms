@@ -1,3 +1,13 @@
+
+/******************************************************************************
+* 
+ Purpose:  Balance
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   12-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.dtatstructure;
 
 import java.io.File;
