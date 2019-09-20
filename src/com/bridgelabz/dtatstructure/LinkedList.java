@@ -161,7 +161,7 @@ public class LinkedList<T> {
 	public String ShowList() {
 		String str = "";
 		Node<T> node = head;
-		while (node.next != null) {
+		while (node.next!= null) {
 			System.out.print(node.data + " ");
 			str +=node.data + " ";
 			node = node.next;
@@ -207,5 +207,23 @@ public class LinkedList<T> {
 			return n.data;
 		}
 
+	}
+	
+	public Node<T> reverseLinkList() 
+	{
+		Node<T> current =head;
+		Node<T>previous=null;
+		Node<T>next=null;
+		
+		while(current!=null) 
+		{   
+			current.next=next;
+			previous=current;
+			current=next;
+			
+		}
+		return previous;
+	
+		
 	}
 }

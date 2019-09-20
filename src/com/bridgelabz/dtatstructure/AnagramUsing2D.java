@@ -22,7 +22,8 @@ public class AnagramUsing2D {
 		for (int i = 0; i < 10; i++) {
 
 			for (int j = start; j < end; j++) {
-				if (Utility.isPrime(j)) {
+				if (Utility.isPrime(j))
+				 {
 					for (int j2 = 0; j2 < 1000; j2++) {
 						if (Utility.isPrime(j2)) {
 							x = 0;

@@ -1,0 +1,6 @@
+package com.bridgelabz.dtatstructure;
+
+public class HashingTab
+{
+
+}

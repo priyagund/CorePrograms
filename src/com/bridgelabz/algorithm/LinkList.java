@@ -79,7 +79,27 @@ public class LinkList
 		  }
 		
 		
-		
+	/*	public  void reverseLinkList()
+		{  
+			if(head==null)
+			{
+				System.out.println("list is empty");
+			}
+			Node previous=null;
+			Node next=null;
+			Node current=head;
+			
+			while(current!=null) 
+			{
+				next=current.next;
+				current.next=previous;
+				previous=current;
+				current=next;
+				
+			}
+			
+		}*/ 
+		 
 		 
 		}
 		  

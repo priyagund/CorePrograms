@@ -1,0 +1,25 @@
+ grain=
+   {
+    [
+   {
+   "name":"rice",
+   "weight":20,
+    "price":40,
+   },
+   
+   {
+   "name":"wheat",
+   "weight":10,
+    "price":30,
+   },
+   
+   {
+    "name":"pulses",
+    "weight":15,
+     "price":50,
+   }
+   
+    ]
+    };
+
+  

@@ -29,20 +29,22 @@ public static void main(String[] args) {
 		int h=0;
 		int s=100;
 		int m=0;
-		System.out.println("length : "+p);
+		System.out.println("length : "+l);
 		
 		//printing prime number in row
 		for(int k=0;k<=1000;k++)
 		{
 			for(m=h;m<s;m++) {
 				
-				if(array[l]>=h && array[l]<s) {
+				if(array[l]>=h && array[l]<s)
+				{
 			       System.out.print(array[l]+" ");
 			       l=l+1;
 				}
 				
 			}
-			if(m==s) {
+			if(m==s) 
+			{
 				h=m+1;
 				s=m+100;
 				if(s==1100)
