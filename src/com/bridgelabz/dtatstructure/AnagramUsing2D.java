@@ -2,12 +2,14 @@
 /******************************************************************************
 * 
  Purpose:  Anagram number using 2D Array
+
 *
 *  @author  Priyanka gund
 *  @version 1.0
 *  @since   13-09-2019
 *
-******************************************************************************/package com.bridgelabz.dtatstructure;
+******************************************************************************/
+package com.bridgelabz.dtatstructure;
 
 import com.bridgelazs.utility.Utility;
 
