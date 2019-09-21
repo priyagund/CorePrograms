@@ -1,0 +1,23 @@
+{
+ "stock":
+       [{
+         "companyname":"wipro",
+          "noofshares":200,
+          "shareprice":1000,
+          "total":0
+        },
+         
+         {
+         "companyname":"TCS",
+          "noofshares":100,
+          "shareprice":2000,
+          "total":0
+         },
+         {
+          "companyname":"Atos",
+          "noofshares":100,
+          "shareprice":2000,
+          "total":0
+         }]
+         
+       }
