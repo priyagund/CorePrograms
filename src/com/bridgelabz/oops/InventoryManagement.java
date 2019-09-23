@@ -16,7 +16,7 @@ public class InventoryManagement
 	  
 	ObjectMapper object=new ObjectMapper();
 	InventoryModel inventrymodel=new InventoryModel();
-	inventrymodel=object.readValue(new File("/home/bridgeit/Desktop/priya/Felloship/CorePrograms/inventry1.json"), InventoryModel.class);
+	inventrymodel=object.readValue(new File("/home/bridgeit/Desktop/priya/Felloship/CorePrograms/inventry1.json"),InventoryModel.class);
 //	/home/bridgeit/Desktop/priya/Felloship/CorePrograms/files/json files/inventry.json
 	//System.out.println(inventrymodel);
 	for(int i=0;i<3 ;i++) {
