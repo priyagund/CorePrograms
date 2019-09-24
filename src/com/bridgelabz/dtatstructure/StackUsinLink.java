@@ -6,7 +6,12 @@
 *  @version 1.0
 *  @since   12-09-2019
 *
-******************************************************************************/package com.bridgelabz.dtatstructure;
+******************************************************************************/
+package com.bridgelabz.dtatstructure;
+
+import java.util.List;
+
+import com.bridgelabz.model.Transactions;
 
 public class StackUsinLink<T> {
 	LinkedList<T> list = new LinkedList<T>();
@@ -18,19 +23,19 @@ public class StackUsinLink<T> {
 		top++;
 	}
 
-	//deleting element from stack
+	// deleting element from stack
 	public T pop() {
-		
+
 		if (!list.isEmpty()) {
 			T data = list.get(top);
-			list.delete(--top);
+			top--;
+			list.delete(top);
 			return data;
 		} else {
 			System.out.println("Nothing to pop");
 			return null;
 		}
-			
-		
+
 	}
 
 	// checking stack status
@@ -39,34 +44,29 @@ public class StackUsinLink<T> {
 	}
 
 	public T peek() {
-		T data = list.get(top);
+		T data = list.get(--top);
 		return data;
 	}
-	
-	//finding size of stack
-	public int size()
-    {
-		int x=0;
-		Node<T> node=list.head;
-		while(node.next!=null)
-		{
-			
-			x++;
-			node=node.next;
-		}
-		return x;
+
+	// finding size of stack
+	public int size() {
+		return top;
 	}
-	
-	// show the element 
-	public void stackshow() 
-	{
-		Node<T> node=list.head;
-		while(node!=null)
-		{   
-			System.out.print(node.data+" ");
-			node=node.next;
+
+	// show the element
+	public void stackshow() {
+		Node<T> node = list.head;
+		while (node != null) {
+			System.out.print(node.data + " ");
+			node = node.next;
 		}
 	}
-	
-	
+
+	public void pushAll(List<Transactions> transactions) {
+		for (int i = 0; i < list.size(); i++) {
+			push(list.get(i));
+		}
+
+	}
+
 }

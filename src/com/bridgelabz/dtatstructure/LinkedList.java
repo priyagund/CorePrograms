@@ -9,8 +9,11 @@
 ******************************************************************************/
 package com.bridgelabz.dtatstructure;
 
+import java.util.List;
+
 public class LinkedList<T> {
 	public Node<T> head;
+	int size=0;
 
 	// inserting data at first
 	public void insertAtFirst(T data) {
@@ -18,6 +21,8 @@ public class LinkedList<T> {
 		node.data = data;
 		node.next = head;
 		head = node;
+		
+		size++;
 
 	}
 
@@ -36,6 +41,7 @@ public class LinkedList<T> {
 			}
 			temp.next = node;
 		}
+		size++;
 
 	}
 
@@ -56,6 +62,7 @@ public class LinkedList<T> {
 			}
 			newnode.next = node;
 		}
+		size++;
 
 	}
 
@@ -67,7 +74,9 @@ public class LinkedList<T> {
 	}
 
 	// search the element in list
-
+	public int size() {
+		return size;
+	}
 	public void search(T key) {
 		boolean isFoundKey = false;
 		if (isEmpty()) {
@@ -101,6 +110,7 @@ public class LinkedList<T> {
 
 	// deleting element in list
 	public void delete(int index) {
+		size--;
 		if (isEmpty()) {
 			System.out.println("list is empty");
 		} else {
@@ -136,6 +146,7 @@ public class LinkedList<T> {
 			}
 			n.next = node.next;
 		}
+		size++;
 
 	}
 
@@ -161,9 +172,9 @@ public class LinkedList<T> {
 	public String ShowList() {
 		String str = "";
 		Node<T> node = head;
-		while (node.next!= null) {
+		while (node.next != null) {
 			System.out.print(node.data + " ");
-			str +=node.data + " ";
+			str += node.data + " ";
 			node = node.next;
 		}
 		System.out.print(node.data);
@@ -208,22 +219,27 @@ public class LinkedList<T> {
 		}
 
 	}
-	
-	public Node<T> reverseLinkList() 
-	{
-		Node<T> current =head;
-		Node<T>previous=null;
-		Node<T>next=null;
-		
-		while(current!=null) 
-		{   
-			current.next=next;
-			previous=current;
-			current=next;
-			
+
+	public Node<T> reverseLinkList() {
+		Node<T> current = head;
+		Node<T> previous = null;
+		Node<T> next = null;
+
+		while (current != null) {
+			current.next = next;
+			previous = current;
+			current = next;
+
 		}
 		return previous;
-	
-		
+
+	}
+
+	public void addAll(List<T> list) {
+		size+=list.size();
+		for (int i = 0; i < list.size(); i++) {
+			addElement(list.get(i));
+		}
+
 	}
 }
