@@ -1,8 +1,11 @@
 package com.bridgelazs.utility;
 
+import com.bridgelabz.model.Address;
+import com.bridgelabz.model.Person;
+
 public class OopsUtility
 {
- 
+   Person person=new Person();
 	public static void showCards(String[][]player) 
 	{
 		for(int i=0;i<player.length;i++)
@@ -48,5 +51,25 @@ public class OopsUtility
 			
 			return player;
 		}
-
+		
+		
+		public static void addPerson()
+		{    Person person=new Person();
+		     Address address=new Address();
+			System.out.println("enter first name");
+			person.setName(Utility.getStr());
+			System.out.println("enter last name");
+			person.setLastname(Utility.getStr());
+			System.out.println("enter state name");
+			address.setCity(Utility.getStr());
+			System.out.println("enter city name ");
+			address.setCity(Utility.getStr());
+			System.out.println("enter zip code");
+			address.setZip(Utility.getStr());
+			
+		}
+		
+		
+      
+		
 }

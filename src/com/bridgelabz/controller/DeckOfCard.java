@@ -1,4 +1,4 @@
-package com.bridgelabz.oops;
+package com.bridgelabz.controller;
 
 import java.util.Random;
 
