@@ -28,7 +28,7 @@ public void setZip(String zip) {
 @Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return getState()+""+getCity()+""+getZip();
+		return getState()+" "+getCity()+" "+getZip();
 	}
   
 }

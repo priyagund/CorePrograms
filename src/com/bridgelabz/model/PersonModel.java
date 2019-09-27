@@ -12,6 +12,10 @@ public List<Person> getPerson() {
 public void setPerson(List<Person> person) {
 	this.person = person;
 }
+@Override
+public String toString() {
+	return "PersonModel [person=" + person + ", address=" + address + "]";
+}
 
   
 }
