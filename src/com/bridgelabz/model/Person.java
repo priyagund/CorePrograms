@@ -34,7 +34,7 @@ public void setPhoneno(String phoneno) {
 }
 @Override
 public String toString() {
-	return "Person [name=" + name + ", lastname=" + lastname + ", phoneno=" + phoneno + ", address=" + address + "]";
+	return getName()+" "+getLastname()+" "+getPhoneno()+" "+getAddress();
 }
 
 }
