@@ -24,6 +24,7 @@ public class AddressBookNew implements ImplPerson {
 	ObjectMapper mapper = new ObjectMapper();
 	File addressbookFilename;
 
+	// method for addPerson
 	public void addPerson(List<Person> listOfPerson) {
 
 		System.out.println("Enter First name");
@@ -67,6 +68,8 @@ public class AddressBookNew implements ImplPerson {
 		person.setAddress(address);
 		return person;
 	}
+	
+	//method for edit person
 	@Override
 	public void editPerson(List<Person> person) {
 		System.out.println("Enter person Phone number which details you want to edit");
@@ -124,6 +127,7 @@ public class AddressBookNew implements ImplPerson {
 
 	}
 
+	// method for delete person
 	@Override
 	public void deletePerson(List<Person> person) {
 		// TODO Auto-generated method stub
@@ -164,7 +168,9 @@ public class AddressBookNew implements ImplPerson {
 		
 
 	}
-
+	
+//method for sortBylstName 
+	
 	@Override
 	public void sortByLastName(List<Person> person) {
 		// TODO Auto-generated method stub
@@ -195,6 +201,7 @@ public class AddressBookNew implements ImplPerson {
 		}
 	}
 
+	//method for sortByZipCode
 	@Override
 	public void sortByZipCode(List<Person> person) {
 		// TODO Auto-generated method stub
@@ -226,6 +233,7 @@ public class AddressBookNew implements ImplPerson {
 		}
 	}
 
+	//method for createAddressBook
 	@Override
 	public void createAddressBook() throws JsonGenerationException, JsonMappingException, IOException {
 		// TODO Auto-generated method stub
@@ -242,6 +250,7 @@ public class AddressBookNew implements ImplPerson {
 
 	}
 
+	// method for open addressbook
 	@Override
 	public List<Person> openAddressBook() throws JsonParseException, JsonMappingException, IOException {
 		// TODO Auto-generated method stub
@@ -277,6 +286,7 @@ public class AddressBookNew implements ImplPerson {
 		return listOfPersons;
 	}
 
+	// method for save addressbook
 	@Override
 	public void saveAddressBook(List<Person> listOfPerson, File filename)
 			throws JsonParseException, JsonMappingException, IOException {
@@ -300,6 +310,8 @@ public class AddressBookNew implements ImplPerson {
 		}
 	}
 
+	///  method for creat addressbook
+	
 	public void creatAddressBook() throws JsonGenerationException, JsonMappingException, IOException {
 		Person person = new Person();
 		System.out.println("enter addressbook name");
