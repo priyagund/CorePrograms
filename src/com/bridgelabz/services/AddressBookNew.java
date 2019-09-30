@@ -95,17 +95,21 @@ public class AddressBookNew implements ImplPerson {
 			switch (choice) {
 
 			case 1: // zip
+				System.out.println("enter new zip code");
 				String zip = Utility.getStr();
 				person.get(personlocation).getAddress().setZip(zip);
 				break;
-			case 2:// name
-				String name = Utility.getStr();
-				person.get(personlocation).setName(name);
+				
+			case 2:// lastname
+				System.out.println("enter new lastname");
+				String lastname = Utility.getStr();
+			    person.get(personlocation).setName(lastname);
 				break;
 
 			case 3:// city
-
+				System.out.println("enter new city");
 				String city = Utility.getStr();
+				//System.out.println("enter new city");
 				person.get(personlocation).getAddress().setCity(city);
 				break;
 			}
@@ -242,8 +246,11 @@ public class AddressBookNew implements ImplPerson {
 
 		File jsonFilename = new File("/home/bridgeit/Desktop/priya/Felloship/CorePrograms/files/" + addName + ".json");
 		addressbookFilename=jsonFilename;
+		//Person[] emptyarray=new Person[]
+		List list = new ArrayList();
 		if (!jsonFilename.exists()) {
 			System.out.println("New Address Book Open Successfully");
+			saveAddressBook(list, jsonFilename);
 		} else {
 			System.out.println("file is already exist");
 		}
@@ -317,8 +324,8 @@ public class AddressBookNew implements ImplPerson {
 		System.out.println("enter addressbook name");
 		String addName = Utility.getStr();
 
-		File jsonFilename = new File("/home/bridgeit/Desktop/priya/Felloship/CorePrograms/files/" + addName + ".json");
-
+		File jsonFilename = new File("/home/bridgeit/Desktop/priya/Felloship/CorePrograms/jsonfiles/" + addName + ".json");
+       System.out.println(jsonFilename.createNewFile());
 		if (jsonFilename.createNewFile()) {
 			FileWriter wr = new FileWriter(jsonFilename);
 			String emptyString = "[{}]";

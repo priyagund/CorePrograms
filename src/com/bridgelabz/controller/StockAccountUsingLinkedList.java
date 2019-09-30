@@ -1,5 +1,15 @@
 
 
+/******************************************************************************
+* 
+ 
+Purpose: stock account using linklist
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   13-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.controller;
 
 import java.io.File;

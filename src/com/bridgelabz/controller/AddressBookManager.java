@@ -1,3 +1,15 @@
+
+/******************************************************************************
+* 
+ 
+Purpose: programm to maintain an address book. An address book holds a collection of entries, each recording a person's first and last names, address, city, state, zip, and
+phone number.
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   30-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.controller;
 
 import java.io.File;
@@ -42,76 +54,69 @@ public class AddressBookManager {
 
 				else {
 					addressBook.addPerson();
-					responce = OopsUtility.isExit();
+					//responce = OopsUtility.isExit();
 				}
-				OopsUtility.isExit();
+				responce=OopsUtility.isExit();
 				break;
 
 			case 2:// open addressbook
 				listOfPersons=addressBook.openAddressBook();
-
-				
-                
-							while(responce) 
-							{
-								System.out.println(
-										"enter choice \n\n1.add person\n2.delete person\n3.edit person\n4.sort by last name\n5.sort by zipcode\n6.Show all user of addressBook");
-								int innerchoice = Utility.getInt();
-								
-								switch (innerchoice) {
-								case 1:// add person
-									addressBook.addPerson(listOfPersons);
-									responce=OopsUtility.isExit();
-									break;
-			
-								case 2: // delete person
-									addressBook.deletePerson(listOfPersons);
-									responce=OopsUtility.isExit();
-									break;
-			
-								case 3:// edit person
-									addressBook.editPerson(listOfPersons);
-									responce=OopsUtility.isExit();
-									break;
-			
-								case 4:// sort by last name
-									addressBook.sortByLastName(listOfPersons);
-									System.out.println(listOfPersons);
-						            //addressBook.saveAddressBook(listOfPerson, filename);
-									responce=OopsUtility.isExit();
-									break;
-			
-								case 5: // sort by zipcode
-									addressBook.sortByZipCode(listOfPersons);
-									responce=OopsUtility.isExit();
-									break;
-			
-								case 6://show all user in addressbook
-									addressBook.showAllAddressBook(listOfPersons);
-									responce=OopsUtility.isExit();
-									break;
-									
-								default:
-									System.out.println("you enter wrong choice");
-									break;
-								}
-								
-								
-							 }
-				
+//                if(listOfPersons==null)
+//                {
+//                	System.out.println("no data present in addressbook");
+//                }
+//                else{
+                	while(responce) 
+					{
+						System.out.println(
+								"enter choice \n\n1.add person\n2.delete person\n3.edit person\n4.sort by last name\n5.sort by zipcode\n6.Show all user of addressBook");
+						int innerchoice = Utility.getInt();
+						
+						switch (innerchoice) {
+						case 1:// add person
+							addressBook.addPerson(listOfPersons);
+							responce=OopsUtility.isExit();
+							break;
+	
+						case 2: // delete person
+							addressBook.deletePerson(listOfPersons);
+							responce=OopsUtility.isExit();
+							break;
+	
+						case 3:// edit person
+							addressBook.editPerson(listOfPersons);
+							responce=OopsUtility.isExit();
+							break;
+	
+						case 4:// sort by last name
+							addressBook.sortByLastName(listOfPersons);
+							System.out.println(listOfPersons);
+				            //addressBook.saveAddressBook(listOfPerson, filename);
+							responce=OopsUtility.isExit();
+							break;
+	
+						case 5: // sort by zipcode
+							addressBook.sortByZipCode(listOfPersons);
+							responce=OopsUtility.isExit();
+							break;
+	
+						case 6://show all user in addressbook
+							addressBook.showAllAddressBook(listOfPersons);
+							responce=OopsUtility.isExit();
+							break;
+							
+						default:
+							System.out.println("you enter wrong choice");
+							break;
+						}
+						
+						
+					 }
+//                }
 			
 			}
 		}
 
-//		addressBook.addPerson(listOfPersons);
-//		addressBook.editPerson(listOfPersons);
-//		addressBook.deletePerson(listOfPersons);
-//		addressBook.sortByLastName(listOfPersons);
-//		addressBook.sortByZipCode(listOfPersons);
-//		addressBook.createAddressBook();
-//		addressBook.openAddressBook();
-		// addressBook.showAllAddressBook(listOfPersons);
-//		System.out.println("save address book");
-		// addressBook.saveAddressBook(listOfPersons, addressbookFilename);
+             System.out.println("thank you for being with us");
 	}
 }

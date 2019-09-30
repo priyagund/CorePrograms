@@ -1,3 +1,16 @@
+
+/******************************************************************************
+* 
+ 
+Purpose: StockAccount.java implements a data type that
+might be used by a financial institution to keep track of customer information. The
+StockAccount class implements following methods
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   13-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.controller;
 
 import java.io.File;

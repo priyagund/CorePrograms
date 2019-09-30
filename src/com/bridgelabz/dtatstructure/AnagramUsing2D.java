@@ -1,7 +1,7 @@
 
 /******************************************************************************
 * 
- Purpose:  Anagram number using 2D Array
+ Purpose:  Anagram number using 2D Arra
 
 *
 *  @author  Priyanka gund

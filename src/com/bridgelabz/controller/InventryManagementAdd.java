@@ -1,3 +1,15 @@
+/******************************************************************************
+* 
+ 
+Purpose:The InventoryManager will call each Inventory Object in its list
+to calculate the Inventory Price and then call the Inventory Object to return the
+JSON String. The main program will be with InventoryManager
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   13-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.controller;
 
 import java.io.File;

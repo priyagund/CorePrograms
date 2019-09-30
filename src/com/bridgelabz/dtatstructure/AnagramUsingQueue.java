@@ -1,13 +1,16 @@
 
+
 /******************************************************************************
 * 
- Purpose:  prime Anagram number using Queue 
+ 
+Purpose:  prime Anagram number using Queue 
 *
 *  @author  Priyanka gund
 *  @version 1.0
 *  @since   13-09-2019
 *
-******************************************************************************/package com.bridgelabz.dtatstructure;
+******************************************************************************/
+package com.bridgelabz.dtatstructure;
 
 import com.bridgelazs.utility.Utility;
 

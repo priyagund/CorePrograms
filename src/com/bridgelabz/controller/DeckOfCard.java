@@ -48,13 +48,16 @@ public class DeckOfCard
 
 	// printing their cards before sorting
 	System.out.print("Cards of players before Sorting are :" +" ");
+	System.out.println();
 	OopsUtility.showCards(cardsOfPlayers);
-
+    System.out.println();
 	// Sorting and showing cards of each player
-	System.out.print("Cards of players after Sorting are :"+ " ");
+	
 	for (int j = 0; j < cardsOfPlayers.length; j++) {
 		OopsUtility.sortCards(cardsOfPlayers[j]);
 	}
+	System.out.print("Cards of players after Sorting are :"+ " ");
+	System.out.println();
 	OopsUtility.showCards(cardsOfPlayers);
 
 }

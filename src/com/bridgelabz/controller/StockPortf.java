@@ -1,3 +1,15 @@
+
+/******************************************************************************
+* 
+ 
+Purpose: program to read in Stock Names, Number of Share, Share Price.
+Print a Stock Report with total value of each Stock and the total value of Stock.
+*
+*  @author  Priyanka gund
+*  @version 1.0
+*  @since   13-09-2019
+*
+******************************************************************************/
 package com.bridgelabz.controller;
 
 import java.io.File;
